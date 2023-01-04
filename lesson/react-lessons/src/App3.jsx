@@ -1,8 +1,7 @@
 import './App.css';
 import Header from "./components/header/Header"
 import Footer from "./components/footer/Footer"
-import Monkey from './components/monkey/Monkey';
-
+import Presidents from './components/presidents/Presidents';
 
 
 
@@ -10,8 +9,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <h1>Hi from app.js</h1>
-      <Monkey />
+<Presidents />
       <Footer/>
     </div>
   );

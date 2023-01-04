@@ -1,3 +1,11 @@
+## Simple React Extension Snippets Common Ones
+- sfc : stateless functional Component
+- imrs : imports react and usestate
+- imrse: imports react, useState, useEffect
+- uef: useEffect
+- usf: useState
+
+
 ## React Inline Styling
 
 On the html element you will use the style atribute and you will sent it equal to an object.
