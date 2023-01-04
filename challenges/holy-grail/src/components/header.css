@@ -1,0 +1,25 @@
+.header {
+      text-align: center;
+      background: url("https://www.dropbox.com/s/t5eju94xuo7cla4/spyro2.jpg?raw=1");
+      background-size: 33.3%;
+    }
+    h1 {
+      margin: 40px;
+      font-size: 70px;
+      color: midnightblue;
+    }
+span{
+  background:rgba(0,0,0,0.8);
+  padding:0px 15px  
+}
+h2{
+  color:white;
+  font-size:30px;
+  margin:30px 0px 10px 0px;
+  
+}
+    img {
+      margin: 20px 0px 0px 0px;
+      border: 7px solid white;
+      border-radius: 20px;
+    }

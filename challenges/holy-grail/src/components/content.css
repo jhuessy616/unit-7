@@ -1,0 +1,30 @@
+.content{
+background:url("https://www.dropbox.com/s/ztyjhovhbkzfk73/Screen%20Shot%202022-11-11%20at%2011.44.26%20PM.png?raw=1"); 
+  background-position: center top;
+  background-attachment: fixed; 
+  
+}
+.abouthero{
+  background-color: rgba(153,204,255,.8);
+   margin-left:  20vw;
+   margin-right: 20vw;
+  padding: 0px 17px 5px 17px;
+  border-radius: 10px;
+}
+p {
+  font-size:18.5px;
+  text-align:center;
+  padding: 3px;
+  margin-top: 0px;
+}
+  img {
+      margin: 20px 0px 0px 0px;
+      border: 7px solid white;
+      border-radius: 20px;
+    }
+
+    figure{
+        text-align: center;
+        padding:3px; 
+        font-size: 20px;
+    }
