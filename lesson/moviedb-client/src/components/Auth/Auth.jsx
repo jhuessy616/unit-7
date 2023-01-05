@@ -1,6 +1,6 @@
 // import Signup from "./signup/Signup";
 import { Col, Container, Row } from "reactstrap";
-import Login from "./login/login";
+import Login from "./login/Login";
 import SignupRef from "./signup/SignupRef";
 // import SignupAdvance from "./signup/signupAdvance";
 
