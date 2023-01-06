@@ -1,16 +1,18 @@
-import React, { useState, useRef } from "react";
-
+import React, { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
+import FullWidthButton from "../../Buttons/FullWidthButton";
 
-const SignupRef = () => {
+const SignupRef = (props) => {
   const firstNameRef = useRef();
   const lastNameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
+  const navigate = useNavigate();
 
   async function handleSubmit(e) {
     e.preventDefault();
- 
+
     const firstName = firstNameRef.current.value;
     const lastName = lastNameRef.current.value;
     const email = emailRef.current.value;
@@ -32,6 +34,14 @@ const SignupRef = () => {
       const response = await fetch(url, requestOptions);
       const data = await response.json();
       console.log(data);
+        if (data.message === "Success") { 
+         // We are free to navigate to another page
+        props.updateToken(data.token)
+          navigate("/movie");
+      }
+      else {
+        alert(data.message);
+      }
     } catch (error) {
       console.log(error.message);
     }
@@ -57,9 +67,13 @@ const SignupRef = () => {
           <Label>Password: </Label>
           <Input type="password" innerRef={passwordRef} />
         </FormGroup>
-        <Button type="submit" color="danger">
-          Sign Up
-        </Button>
+        <FullWidthButton>
+          {/* <div className="d-grid gap-2 mb-4"> */}
+          <Button type="submit" color="danger">
+            Sign Up
+          </Button>
+          {/* </div> */}
+        </FullWidthButton>
       </Form>
     </>
   );

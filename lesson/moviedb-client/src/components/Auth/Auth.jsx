@@ -4,17 +4,17 @@ import Login from "./login/Login";
 import SignupRef from "./signup/SignupRef";
 // import SignupAdvance from "./signup/signupAdvance";
 
-function Auth() {
+function Auth(props) {
   return (
       <>
           <h2>Auth</h2>
           <Container>
               <Row>
                   <Col md="6">
-          <SignupRef />
+          <SignupRef updateToken={props.updateToken} />
                   </Col>
                  <Col md="6">
-          <Login/>
+                      <Login updateToken={props.updateToken} />
                   </Col> 
               </Row>
               
