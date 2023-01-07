@@ -8,6 +8,7 @@ function MovieCreate(props) {
     const movieYearRef = useRef();
     const isCurrentlyInTheatersRef = useRef();
     const ratingRef = useRef();
+    const formRef = useRef();
 
   async function handleSubmit(e) {
       e.preventDefault();
@@ -16,6 +17,7 @@ function MovieCreate(props) {
       const movieYear = movieYearRef.current.value
       const isCurrentlyInTheaters = isCurrentlyInTheatersRef.current.value
       const rating = ratingRef.current.value 
+    
       
        let url = `http://localhost:4000/movie/add`
 
@@ -34,6 +36,8 @@ function MovieCreate(props) {
         try {
       const response = await fetch(url, requestOptions);
             const data = await response.json();
+            props.fetchMovies()
+            formRef.current.reset()
     } catch (error) {
       console.log(error.message)
     }
@@ -43,7 +47,7 @@ function MovieCreate(props) {
     
   return (
       <>
-          <Form onSubmit={handleSubmit}>
+          <Form onSubmit={handleSubmit} innerRef={formRef}>
               <FormGroup>
                   <Label>Movie Title</Label>
                   <Input innerRef={movieTitleRef } /> 

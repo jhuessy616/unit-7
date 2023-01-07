@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Auth from "./components/Auth/Auth";
 import MovieIndex from "./components/movie/MovieIndex";
+// import MovieEdit from "./components/movie/MovieEdit";
+import MovieEditRob from "./components/movie/MovieEditRob";
 
 
 function App() {
@@ -21,7 +23,9 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Auth updateToken={updateToken} />} />
-        <Route path="/movie" element={<MovieIndex token={sessionToken} />}/>
+        <Route path="/movie" element={<MovieIndex token={sessionToken} />} />
+        <Route path="/movie/:id" element={<MovieEditRob token={sessionToken} />} />
+        {/* <Route path="/movie/:id" element={<MovieEdit token={sessionToken} />}/> */}
       </Routes>
     </div>
   );
