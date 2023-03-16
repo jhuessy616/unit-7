@@ -1,13 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import { Table, Button } from "reactstrap";
 import jwt_decode from "jwt-decode";
+import APIURL from "../../helper/environment";
 
 
 const MovieTable = (props) => {
   const decoded = props.token ? jwt_decode(props.token) : "";
   const navigate = useNavigate();
   async function deleteMovie(id) {
-    const url = `http://localhost:4000/movie/${id}`;
+    const url = `${APIURL}/movie/${id}`;
 
     let myHeaders = new Headers();
     myHeaders.append("Authorization", props.token);

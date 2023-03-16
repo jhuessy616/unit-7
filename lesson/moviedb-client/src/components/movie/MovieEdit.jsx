@@ -12,6 +12,7 @@ import {
   Label,
 } from "reactstrap";
 import FullWidthButton from "../Buttons/FullWidthButton";
+import APIURL from "../../helper/environment";
 
 const MovieEdit = (props) => {
     const { id } = useParams();
@@ -58,7 +59,7 @@ const MovieEdit = (props) => {
   
   }
   const fetchMovie = async () => {
-    const url = `http://localhost:4000/movie/${id}`;
+    const url = `${APIURL}/movie/${id}`;
     let myHeaders = new Headers();
     myHeaders.append("Authorization", props.token);
 

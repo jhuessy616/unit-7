@@ -12,6 +12,7 @@ import {
   Alert,
 } from "reactstrap";
 import FullWidthButton from "../Buttons/FullWidthButton";
+import APIURL from "../../helper/environment";
 
 const MovieEditRob = (props) => {
   const { id } = useParams();
@@ -26,7 +27,7 @@ const MovieEditRob = (props) => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    let url = `http://localhost:4000/movie/update/${id}`;
+    let url = `${APIURL}/movie/update/${id}`;
 
     let bodyObj = JSON.stringify({
       movieTitle,
